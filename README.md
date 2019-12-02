@@ -1,5 +1,28 @@
 # Url Shortener Code Test
 
+
+## User Stories
+
+```
+1. As a time-poor user of the internet,
+so that I don't have to type long urls,
+I would like the program to receive full urls.
+```
+
+```
+2.  As a time-poor web user,
+so that I can maximise my web-browsing,
+I would like the program to return shortened urls.
+```
+
+```
+3. As a speedy user of the internet,
+so that I can be efficient with my time online,
+I would like the shortened urls to redirect me to the full length url.
+```
+
+## Requirements From Farmdrop
+
 Without using an external database, we'd like you to create a URL shortening
 service. The URLs do not need to persist between restarts, but should be
 shareable between different clients while the server is running.
