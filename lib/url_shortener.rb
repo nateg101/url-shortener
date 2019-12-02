@@ -11,7 +11,23 @@ class UrlShortener
   end
 
   def return_url
-    @urls
+    @urls["url"]
+  end
+
+  def shorten_url(fullurl)
+    split_domain = fullurl.split('')
+    short_domain = choose_characters(split_domain)
+    urls["short_url"] = "/#{short_domain}"
+  end
+
+  def return_short_url
+    @urls["short_url"]
+  end
+
+  private
+
+  def choose_characters(split_url)
+    split_url.sample(4).join
   end
 
 end
