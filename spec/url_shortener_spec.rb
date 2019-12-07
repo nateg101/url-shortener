@@ -13,6 +13,13 @@ describe UrlShortener do
       expect(urlshortener.return_url).to eq "http://www.farmdrop.com"
     end
 
+  end
+
+  context '#shorten_url' do
+    before(:each) do
+      urlshortener.add_url("http://www.farmdrop.com")
+    end
+
     it 'accepts a url and returns a shorter url' do
       allow(urlshortener).to receive(:choose_characters).and_return("farm")
       urlshortener.shorten_url("http://www.farmdrop.com")
@@ -20,5 +27,4 @@ describe UrlShortener do
       expect(urlshortener.return_short_url).to eq "/farm"
     end
   end
-
 end
