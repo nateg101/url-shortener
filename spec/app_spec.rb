@@ -2,11 +2,11 @@ describe 'App' do
 
   subject(:app) { App.new }
 
-  context 'get /:fullurl' do
-    let (:response) { get "/www.farmdrop.com" }
+  context 'get/:shorturl' do
+    let (:response) { get "/farm"}
 
-    it 'returns 200 status' do
-      expect(response.status).to eq 200
+    it 'returns a 301 status' do
+      expect(response.status).to eq 301
     end
   end
 end
