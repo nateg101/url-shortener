@@ -6,6 +6,15 @@ class UrlShortener
     @urls = {}
   end
 
+  def self.instance
+    @urlshortener = UrlShortener.new
+  end
+
+  def create_new_shortener(fullurl)
+    add_url(fullurl)
+    shorten_url(fullurl)
+  end
+
   def add_url(fullurl)
     @urls["url"] = fullurl
   end
