@@ -1,5 +1,14 @@
 # Url Shortener Code Test
 
+## How To Use
+
+1. Clone this repository
+
+2. Run `$ bundle install`
+
+3. Run `$ rackup`
+
+For testing run `$ rspec`
 
 ## User Stories
 
@@ -20,6 +29,8 @@ I would like the program to return shortened urls.
 so that I can be efficient with my time online,
 I would like the shortened urls to redirect me to the full length url.
 ```
+
+Note - this is currently a partial solution.
 
 ## Requirements From Farmdrop
 
