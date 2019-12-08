@@ -18,11 +18,11 @@ class App < Sinatra::Base
 
     short_url = @url_shortener.shorten_url(url['url'])
 
-    { short_url: "#{short_url}", url: @url_shortener.return_url }.to_json
+    { short_url: "#{short_url}", url: @url_shortener.return_url["url"] }.to_json
   end
 
   get '/:short_url' do
-
+    url = params[:short_url]
     redirect "#{ @url_shortener.return_url }", 301
   end
 

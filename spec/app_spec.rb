@@ -8,5 +8,6 @@ describe 'App' do
     it 'returns a 301 status' do
       expect(response.status).to eq 301
     end
+
   end
 end

@@ -15,7 +15,7 @@ class UrlShortener
   end
 
   def shorten_url(fullurl)
-    split_domain = fullurl.tr('./', '').split('')
+    split_domain = fullurl.tr('./:', '').split('')
     short_domain = choose_characters(split_domain)
     urls["short_url"] = "/#{short_domain}"
   end
